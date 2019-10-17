@@ -2,7 +2,7 @@
 Einfaches TicTacToe gegen den Computer
 
 ### TO-FIX
-Player kann auf bereits belegtes Feld sein X oder O setzen
+~~Player kann auf bereits belegtes Feld sein X oder O setzen~~
 
 ### TO-DO
 Mehr Einstellungen

@@ -34,9 +34,17 @@ public class Main {
 
 
         for(int round = 1; round <= 5; round++){
-            System.out.println("Geben sie ihr "+ player + " ein: ");
-            int pos = Integer.parseInt(eingabe.readLine());
-            board[pos] = player;
+            boolean var=true;
+            do{
+                System.out.println("Geben sie ihr "+ player + " ein: ");
+                int pos = Integer.parseInt(eingabe.readLine());
+                if(Win.checkfreespace(board, pos)){
+                    board[pos] = player;
+                    var = false;
+                }else
+                    System.out.println("Feld bereits belegt. Bitte erneute Eingabe.");
+
+            }while(var);
             if(Win.checkwin(board,player)){
                 System.out.println("Du hast gegen die Com gewonnen!");
                 break;
